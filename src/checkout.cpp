@@ -77,10 +77,6 @@ double Checkout::total(){
 	double sum = 0;
 
 	for (it = this->order.begin(); it != this->order.end(); it++) {
-//	    std::cout << it->first    // string (key)
-//	              << ':'
-//	              << it->second   // string's value
-//	              << std::endl;
 
 		if (!this->items[it->first].discount_qty)
 			sum += it->second * this->items[it->first].price;
