@@ -72,7 +72,6 @@ double Checkout::total(){
 	//{"id":3,"product_name":"coconuts","price":2,"qty_price":3,"discount_qty":2},
 	//{"id":4,"product_name":"donuts","price":0.5,"qty_price":null,"discount_qty":null}]
 
-	//https://stackoverflow.com/questions/26281979/how-do-you-loop-through-a-stdmap
 	map<string, int>::iterator it;
 	double sum = 0;
 
@@ -137,7 +136,7 @@ int main() {
         std::cerr << "Request failed, error: " << e.what() << '\n';
     }
 
-    //create the checkout object with the current pricing rules received from the DB (as a JSON string)
+    //create the checkout object with the current pricing rules received from the AWS DB (as a JSON string)
     Checkout co(result);
 
     co.scan("apples");
